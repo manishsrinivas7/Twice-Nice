@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sell</title>
+
+  <!-- Bootstrap Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!--google fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- css links -->
+  <link rel="stylesheet" href="css/styles3.css">
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- fontawesome-->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+</head>
+
+<body>
+  <h3><a href="/" class="title">TwiceNice</a></h3>
+  <h1 class="sellpage-head">Sell books</h1>
+  <a href="../"><i class="fas fa-chevron-circle-left fa-3x back-icon"></i></a>
+
+  <!-- collapse instructions -->
+  <div class="sellpage-body">
+    <button class="btn btn-collapse" type="button" data-toggle="collapse" data-target="#steps" aria-expanded="false" aria-controls="collapseExample">
+      The following are the steps to selling your books <i class="fas fa-caret-down"></i>
+    </button>
+    <div class="collapse" id="steps">
+      <div class="card card-body">
+        <ul>
+          <!-- <li> Verify the PIN code in order to use the pickup facility.</li> -->
+          <li> Type in the ISBN number (printed on back of book)</li>
+          <li> Upload a pictures for the book's front view</li>
+          <!-- <li> Choose a delivery date and place.</li>
+        <li> Verify the cumulative number of points earned.</li> -->
+
+        </ul>
+      </div>
+    </div>
+    <br>
+    <br>
+    <button class="btn btn-collapse" type="button" data-toggle="collapse" data-target="#conditions" aria-expanded="false" aria-controls="collapseExample">
+      Conditions for the "Sell your books" program <i class="fas fa-caret-down"></i>
+    </button>
+    <div class="collapse" id="conditions">
+      <div class="card card-body">
+        <ul>
+          <li> We do not accept content that has been pirated, physically altered, or photocopied. We also do not accept workbooks, illegal sample material, registeres, or notebooks.</li>
+          <!-- <li> If you are unable to arrive at the pickup points, please reschedule the pickup 24 hours in advance; for missed pickup attempts, logistics charges will be deducted from the points.</li> -->
+          <li> Give the mobile number, email address that you use, so that the buyer can contact you. </li>
+          <li> If the book does not obligue to our policies, it would be rejected. </li>
+          <!-- <li> The reward will be in the form of Bookchor Loyalty points; no cash will be provided for the books sold. (1 rupee = 2 points)</li>
+         -->
+        </ul>
+      </div>
+    </div>
+    <br>
+    <br>
+    <form action="/uploadBook" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <div class="input-group input-group-sm mb-3 text-input">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">EnterISBN number</span>
+            </div>
+            <input type="text" class="form-control" name="isbn" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+          </div>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Title of the book</span>
+            </div>
+            <input type="text" class="form-control" name="title" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
+          </div>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Name of the Author</span>
+            </div>
+            <input type="text" class="form-control" name="author" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+          </div>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">MRP</span>
+            </div>
+            <input type="number" class="form-control" name="mrp" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" required>
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Contact Number</span>
+            </div>
+            <input type="text" class="form-control" name="phone" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" required>
+          </div>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Email Id</span>
+            </div>
+            <input type="text" class="form-control" name="email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+          </div>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Location</span>
+            </div>
+            <input type="text" class="form-control" name="city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
+          </div>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+            </div>
+            <textarea class="form-control" name="desc" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"></textarea>
+          </div>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Genre/Category</span>
+            </div>
+            <!-- <label for="Genre">Genre/Category:</label> -->
+            <select class="form-control" name="category" id="Genre" required>
+              <option>Medical</option>
+              <option>Engineering</option>
+              <option>Arts</option>
+              <option>Comic</option>
+              <option>Psychology</option>
+              <option>Biography</option>
+              <option>Mythology</option>
+              <option>Fiction</option>
+              <option>Children</option>
+            </select>
+          </div>
+
+        </div>
+
+        <br>
+        <br>
+        <h5>Upload book images</h5>
+        <label for="Frontview">Front view:</label>
+        <input type="file" class="form-control-file" name="image" id="Frontview" required>
+        <br>
+        <br>
+        <button type="submit" name="button" class="btn btn-info">Submit</button>
+      </div>
+    </form>
+
+  </div>
+  <p class=>© Copyright 2021 TwiceNice</p>
+</body>
+
+</html>

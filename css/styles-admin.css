@@ -1,0 +1,82 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  /* background-color: #A683E3; */
+  background-color: #DEFCF9;
+  margin: 0;
+}
+
+.back-icon{
+  color:#4682b4;
+  margin-top: 20px;
+  /* border: 2px solid #4682b4; */
+  border-radius: 50%;
+  margin-left: 35px;
+}
+
+h1{
+  text-align: center;
+  color: #1E56A0;
+}
+
+h2 {
+padding: 0 5%;
+color: #A683E3;
+}
+
+.container-fluid{
+  padding-left: 3%;
+}
+
+.book-card{
+  padding: 1% 1%;
+  margin-bottom: 2%;
+}
+
+.card-title {
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+.card-text {
+  color: #CDBBA7;
+}
+.icons{
+  margin-right: 3%;
+}
+
+.buy {
+  margin: 3%;
+  color: #00A19D;
+}
+.mrp {
+  /* font-size: 50px; */
+  font-weight: bolder;
+  font-size: 25px;
+  color: #6ECB63;
+}
+/* .flex-container {
+    display: flex;
+    padding: 3% 5%;
+}
+
+.flex-child {
+    flex: 1;
+    border: 2px solid yellow;
+
+}
+
+.req-img {
+  height: 100%;
+  width: 100%;
+}
+
+.desc{
+  padding-left: 5%;
+} */
+
+.ac{
+  color:green;
+}
+.wa{
+  color:red;
+}

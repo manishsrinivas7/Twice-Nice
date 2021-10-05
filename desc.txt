@@ -1,0 +1,45 @@
+<% var i=0 %>
+<% items.forEach(function(image) {  %>
+<div class="flex-container">
+<div class="flex-child image">
+  <img class="req-img" src="data:image/<%=image.img.contentType%>;base64,
+       <%=image.img.data.toString('base64')%>" alt="request image">
+</div>
+
+<div class="flex-child content">
+  <p class="title"><%= image.title %></p>
+  <p class="desc">ISBN: <%= image.isbn %> | Author: <%= image.author %> </p>
+  <p class="desc"><%= image.category %></p>
+  <p class="buy">Want this book? contact below details.</p>
+
+  <table>
+      <tr>
+        <td rowspan=2 >
+          <p class="mrp">Rs.<%= image.mrp %></p>
+        </td>
+        <td>
+          <p class="contact"><i class="fas fa-mobile-alt "></i> <%= image.phone %></p>
+        </td>
+
+      </tr>
+      <tr>
+        <td>
+          <p class="contact"><i class="fas fa-envelope "></i> <%= image.email %></p>
+        </td>
+
+
+      </tr>
+      <tr>
+        <td colspan="3">
+          <p class="location"><i class="fas fa-map-marker-alt"></i> Hyderabad</p>
+        </td>
+      </tr>
+    </table>
+    <p class="desc"><%= image.description %></p>
+
+
+</div>
+
+</div>
+<% i= i+1 %>
+<% }) %>
